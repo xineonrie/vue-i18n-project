@@ -1,0 +1,54 @@
+# ---- Node & Vite ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- Capacitor / Mobile ----
+# Android build
+android/.gradle/
+android/app/build/
+android/local.properties
+android/captures/
+android/.idea/
+
+# iOS build
+ios/App/build/
+ios/App/Pods/
+ios/App/Podfile.lock
+ios/App/xcuserdata/
+ios/App/*.xcworkspace
+ios/App/*.xcuserstate
+DerivedData/
+
+# ---- Testing ----
+coverage/
+*.lcov
+
+localazy/
+*.xliff
+*.po
+*.mo
+*.pot
+
+# ---- Misc ----
+# Capacitor sync artifacts
+www/
