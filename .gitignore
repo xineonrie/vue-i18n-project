@@ -1,8 +1,8 @@
-# ---- Node & Vite ----
+# --- Node / Vite ---
 node_modules/
 dist/
-dist-ssr/
-*.local
+.vite/
+*.tsbuildinfo
 
 # Logs
 npm-debug.log*
@@ -10,45 +10,68 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.log
 
-# Environment variables
+# Env files (keep examples)
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
-# Editor & OS files
-.DS_Store
-Thumbs.db
+# Caches
+.eslintcache
+.stylelintcache
+.pnpm-debug.log*
+coverage/
+.playwright-report/
+test-results/
+.nyc_output/
+
+# Editors / OS
 .vscode/
 .idea/
+*.iml
+.DS_Store
+Thumbs.db
 
-# ---- Capacitor / Mobile ----
-# Android build
+# Yarn PnP
+.pnp.*
+.yarn/*
+
+# --- Capacitor: synced web assets inside native projects ---
+# (Capacitor copies web build to these folders; don't commit compiled assets)
+android/app/src/main/assets/public/
+!android/app/src/main/assets/public/.gitkeep
+ios/App/App/public/
+!ios/App/App/public/.gitkeep
+
+# --- Android native project artifacts (keep source, ignore build & local configs) ---
 android/.gradle/
-android/app/build/
-android/local.properties
-android/captures/
 android/.idea/
+android/local.properties
+android/capacitor-cordova-android-plugins/
+android/build/
+android/app/build/
+*.keystore
+*.jks
 
-# iOS build
+# --- iOS native project artifacts (keep source, ignore build & user data) ---
+ios/DerivedData/
+ios/*.xcworkspace/xcuserdata/
 ios/App/build/
 ios/App/Pods/
-ios/App/Podfile.lock
-ios/App/xcuserdata/
-ios/App/*.xcworkspace
-ios/App/*.xcuserstate
-DerivedData/
+ios/**/xcuserdata/
+ios/**/.DS_Store
+*.xcuserstate
+*.moved-aside
+.swiftpm/
 
-# ---- Testing ----
-coverage/
-*.lcov
+# --- Package managers lockfiles (choose one; usually commit the one you use) ---
+# Uncomment the ones you DON'T use to ignore them:
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
 
-localazy/
-*.xliff
-*.po
-*.mo
-*.pot
-
-# ---- Misc ----
-# Capacitor sync artifacts
-www/
+# --- Misc ---
+tmp/
+temp/
+*.orig
