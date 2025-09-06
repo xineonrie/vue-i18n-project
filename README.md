@@ -37,3 +37,34 @@ npm run build
 ```sh
 npm run test:unit
 ```
+## Project Structure
+
+vue-project/
+├─ .vscode/                   — Workspace settings (formatting, extensions)
+├─ android/                   — Capacitor Android native project (Gradle, Manifest)
+├─ node_modules/              — Installed dependencies (managed by npm/pnpm/yarn)
+├─ public/                    — Static assets copied as-is to the build (served from /)
+│  └─ ...
+├─ src/                       — Application source
+│  ├─ assets/                 — Imported assets processed by Vite (hashing, bundling)
+│  ├─ components/             — Reusable UI components (non-route)
+│  ├─ router/                 — Vue Router setup (e.g., index.ts)
+│  ├─ views/                  — Route-level pages
+│  │  ├─ HomeView.vue
+│  │  └─ AboutView.vue
+│  ├─ App.vue                 — Root component (layout, <router-view/>)
+│  └─ main.ts                 — App entry (createApp, use(router), mount)
+├─ .gitattributes             — Git attributes (line endings, text/binary rules)
+├─ .gitignore                 — Git ignore rules (node_modules, dist, native builds, etc.)
+├─ .prettierrc.json           — Prettier code-style config
+├─ capacitor.config.ts        — Capacitor config (appId, appName, webDir=dist, server)
+├─ env.d.ts                   — TypeScript shims (e.g., declare *.vue)
+├─ index.html                 — Vite HTML template (#app mount point)
+├─ package.json               — Scripts + dependency manifest
+├─ package-lock.json          — Lockfile (pins dependency versions)
+├─ tsconfig.app.json          — TS options for app code
+├─ tsconfig.json              — Base TS config shared by others
+├─ tsconfig.node.json         — TS for Node-side files (e.g., vite.config.ts)
+├─ tsconfig.vitest.json       — TS config for tests
+├─ vite.config.ts             — Vite config (plugins, aliases, dev server/HMR, build)
+└─ vitest.config.ts           — Vitest test runner config
