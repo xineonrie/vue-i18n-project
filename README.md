@@ -1,70 +1,41 @@
-# vue-project
+# 🌐 Vue 3 Multi-language Switcher Demo
 
-This template should help get you started developing with Vue 3 in Vite.
+## 1. Project Overview
+This project is a demo built with **Vue 3 + Vite + Vuex + Capacitor** to showcase an in-app language switcher.  I selected a figma design file form the figma community, and developed a music playing app with 2 pages as an example.
+Figma: https://www.figma.com/design/P3SpXlP8z7pyCn8jgEpmAW/Music-player-App-Design-%7C-Free-to-use--Community-?node-id=0-1&p=f&t=dKRlH3cWzBSBFXIY-0
 
-## Recommended IDE Setup
+It demonstrates:
+- Runtime language switching without rebuilding the app
+- Initial language setup via URL query parameter
+- Persistent language preference across sessions
+- Consistent support on Web, iOS, and Android (via Capacitor)
+- Lazy-loading and code-splitting for large translation files
+- Basic accessibility support 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 2. Tech Stack
+- **Vue 3** – Front-end framework  
+- **Vite** – Build tool  
+- **Vuex** – State management  
+- **vue-i18n** – Internationalization  
+- **Capacitor** – Cross-platform deployment (Web/Android/iOS)  
+- **accessibility**
 
-## Type Support for `.vue` Imports in TS
+## 3. Features
+- [] P0 - Basic page structure (And choose one music to play)
+- [] P0 - Runtime language switching 
+- [] P0 - Initial language setup from URL parameter (`?lang=xx`)  
+- [] P0 - Persistent language preference  
+- [] P0 - Cross-platform support (Web + iOS + Android)  
+- [] P0 - Lazy-loaded translation files (one chunk per language)  
+- [] P0 - Updates `<html lang>` and supports RTL languages  
+- [] P0 - Basic accessibility support  
+- [] P1 Localazy integration  
+- [] P2 End-to-end tests (Cypress/Playwright)  
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 4. How to demo
 
-## Customize configuration
+TODO
 
-See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-## Project Structure
-
-vue-project/
-├─ .vscode/                   — Workspace settings (formatting, extensions)
-├─ android/                   — Capacitor Android native project (Gradle, Manifest)
-├─ node_modules/              — Installed dependencies (managed by npm/pnpm/yarn)
-├─ public/                    — Static assets copied as-is to the build (served from /)
-│  └─ ...
-├─ src/                       — Application source
-│  ├─ assets/                 — Imported assets processed by Vite (hashing, bundling)
-│  ├─ components/             — Reusable UI components (non-route)
-│  ├─ router/                 — Vue Router setup (e.g., index.ts)
-│  ├─ views/                  — Route-level pages
-│  │  ├─ HomeView.vue
-│  │  └─ AboutView.vue
-│  ├─ App.vue                 — Root component (layout, <router-view/>)
-│  └─ main.ts                 — App entry (createApp, use(router), mount)
-├─ .gitattributes             — Git attributes (line endings, text/binary rules)
-├─ .gitignore                 — Git ignore rules (node_modules, dist, native builds, etc.)
-├─ .prettierrc.json           — Prettier code-style config
-├─ capacitor.config.ts        — Capacitor config (appId, appName, webDir=dist, server)
-├─ env.d.ts                   — TypeScript shims (e.g., declare *.vue)
-├─ index.html                 — Vite HTML template (#app mount point)
-├─ package.json               — Scripts + dependency manifest
-├─ package-lock.json          — Lockfile (pins dependency versions)
-├─ tsconfig.app.json          — TS options for app code
-├─ tsconfig.json              — Base TS config shared by others
-├─ tsconfig.node.json         — TS for Node-side files (e.g., vite.config.ts)
-├─ tsconfig.vitest.json       — TS config for tests
-├─ vite.config.ts             — Vite config (plugins, aliases, dev server/HMR, build)
-└─ vitest.config.ts           — Vitest test runner config
+## 5. Future Improvements
+TODO
