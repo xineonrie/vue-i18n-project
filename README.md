@@ -20,6 +20,8 @@ It demonstrates:
 - **Capacitor** – Cross-platform deployment (Web/Android/iOS)  
 - **accessibility**
 
+I know nothing about these so learn first! 🧐
+
 ## 3. Features
 - [ ] P0 - Basic page structure (And choose one music to play)
 - [ ] P0 - Runtime language switching 

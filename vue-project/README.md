@@ -49,6 +49,9 @@ vue-project/
 │  ├─ assets/                 — Imported assets processed by Vite (hashing, bundling)
 │  ├─ components/             — Reusable UI components (non-route)
 │  ├─ router/                 — Vue Router setup (e.g., index.ts)
+│  ├─ i18n/                   — i18n config
+│  ├─ locales/                — locales message json (en, zh-CN, ar)
+│  ├─ utils/                  — Common utils (storage)
 │  ├─ views/                  — Route-level pages
 │  │  ├─ HomeView.vue
 │  │  └─ AboutView.vue
