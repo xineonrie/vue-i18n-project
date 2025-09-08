@@ -19,10 +19,16 @@ async function loadMessages(locale: string) {
 export async function setLocale(locale: string) {
     if(!i18n.global.availableLocales.includes(locale)){
         // For language packages that haven't been loaded
-        const msgs = await loadMessages(locale)
-        i18n.global.setLocaleMessage(locale, msgs)
+        try {
+            const msgs = await loadMessages(locale)
+            i18n.global.setLocaleMessage(locale, msgs)
+            i18n.global.locale.value = locale
+        }catch(e) {
+            console.error('[i18n] Failed to load current messages. Use fallback instead. Error lang: ', locale)
+            i18n.global.locale.value = FALLBACK
+        }
+
     }
-    i18n.global.locale.value = locale
     document.documentElement.setAttribute('lang', locale) // set html language tag
     const isRtl = RTL_PREFIXES.some(p => locale.startsWith(p)) // if RTL, just prefixes check
     document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr')
@@ -36,6 +42,8 @@ export async function initLocale() {
     const saved = await storage.get('locale') 
     const browser = navigator.language || FALLBACK
     const initial = q || saved || browser || FALLBACK
+    console.log('current lang: ', initial)
+
     await setLocale(initial)
 
 }
