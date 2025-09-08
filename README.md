@@ -24,12 +24,12 @@ It demonstrates:
 I know nothing about these so learn first! 🧐
 
 ## 3. Features
-- [ ] P0 - Basic page structure
-    - [ ] P0 - Login Page
-    - [ ] P0 - home Page (And choose one music to play!)
+- [x] P0 - Basic page structure
+    - [x] P0 - Login Page
+    - [ ] P1 - home Page (And choose one music to play!)
 - [ ] P0 - Runtime language switching 
 - [x] P0 - Initial language setup from URL parameter (`?lang=xx`)  
-- [ ] P0 - Persistent language preference  
+- [x] P0 - Persistent language preference  
 - [ ] P0 - Cross-platform support (Web + iOS + Android)  
 - [ ] P0 - Lazy-loaded translation files (one chunk per language)  
 - [ ] P0 - Updates `<html lang>` and supports RTL languages  
