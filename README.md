@@ -30,14 +30,14 @@ I know nothing about these so learn first! 🧐
     - [x] P0 - Login Page
     - [ ] P1 - Home Page (And choose one music to play!)
 - [x] P0 - i18n support
-    - [ ] P0 - Runtime language switching 
+    - [x] P0 - Runtime language switching 
     - [x] P0 - Initial language setup from URL parameter (`?lang=xx`)  
     - [x] P0 - Persistent language preference  
-    - [ ] P0 - Updates `<html lang>` and supports RTL languages 
+    - [x] P0 - Updates `<html lang>` and supports RTL languages 
 - [ ] P0 - Cross-platform support (Web + iOS + Android)  
     - [x] P0 - Basic layout component (responsive design)
     - [x] P0 - Web layout check
-    - [x] P0 - Android layout check
+    - [ ] P0 - Android layout check
     - [x] P1 - ios layout check (Xcode needed)
 - [ ] P0 - Build performance optimization 
     - [ ] P0 - Lazy-loaded translation files (one chunk per language)   

@@ -1,11 +1,18 @@
 {
-    "nowPlaying": "Now playing",
-    "play": "Play",
-    "pause": "Pause",
-    "prev": "Previous",
-    "next": "Next",
-    "volume": "Volume",
-    "chooseDevice": "AirPods Pro (Dave)",
-    "trackDuration": "{m}:{s}"
-  }
-  
+  "loginTitle1" :"Sign in to your",
+  "loginTitle2" :"Account",
+  "loginInfo":"Don't have an account?",
+  "register": "Sign Up",
+  "forgetPassword":"Forgot Your Password ?",
+  "userNamePlaceHolder": "username",
+  "passwordPlaceHolder": "password",
+  "login":"Login",
+  "nowPlaying": "Now playing",
+  "play": "Play",
+  "pause": "Pause",
+  "prev": "Previous",
+  "next": "Next",
+  "volume": "Volume",
+  "chooseDevice": "AirPods Pro (Dave)",
+  "trackDuration": "{m}:{s}"
+}

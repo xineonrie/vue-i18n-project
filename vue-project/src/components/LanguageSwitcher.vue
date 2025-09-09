@@ -1,5 +1,12 @@
 <script setup lang="ts">
+  import {langList} from '../i18n/index'
+  import store from '@/store';
   const props = defineProps(['currentColor'])
+
+  async function onMenuClick (e: any){
+    const targetLocale = e.target.id
+    await store.dispatch('i18n/setLocale', targetLocale)
+  }
 
 </script>
 
@@ -11,14 +18,8 @@
     </svg>
     <template #overlay>
           <a-menu>
-            <a-menu-item>
-                <span>English</span>
-            </a-menu-item>
-            <a-menu-item>
-              <span>简体中文</span>
-            </a-menu-item>
-            <a-menu-item>
-              <div dir="rtl" class="rtl-class">العربية</div>
+            <a-menu-item v-for="item in langList" @click="onMenuClick">
+                <span :id="item.locale">{{ item.name }}</span>
             </a-menu-item>
           </a-menu>
         </template>
@@ -31,5 +32,6 @@
     width: 24px;
     height: 24px;
     z-index: 10;
+    cursor: pointer;
   }
 </style>

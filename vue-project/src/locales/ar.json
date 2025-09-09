@@ -1,3 +1,18 @@
 {
-    
-}
+    "loginTitle1": "تسجيل الدخول",
+    "loginTitle2": "حسابك",
+    "loginInfo": "مستخدم جديد؟",
+    "register": "اضغط هنا للتسجيل",
+    "userNamePlaceHolder": "يرجى إدخال اسم المستخدم",
+    "passwordPlaceHolder": "يرجى إدخال كلمة المرور",
+    "forgetPassword": "هل نسيت كلمة المرور؟",
+    "login": "تسجيل الدخول",
+    "nowPlaying": "قيد التشغيل",
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "prev": "السابق",
+    "next": "التالي",
+    "volume": "مستوى الصوت",
+    "chooseDevice": "اختر الجهاز",
+    "trackDuration": "{m}:{s}"
+  }

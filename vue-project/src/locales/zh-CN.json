@@ -1,11 +1,19 @@
 {
-    "nowPlaying": "正在播放",
-    "play": "播放",
-    "pause": "暂停",
-    "prev": "上一首",
-    "next": "下一首",
-    "volume": "音量",
-    "chooseDevice": "AirPods Pro（Dave）",
-    "trackDuration": "{m}:{s}"
-  }
+  "loginTitle1" :"登录",
+  "loginTitle2" :"您的账户",
+  "loginInfo":"新用户？",
+  "register": "点此注册",
+  "userNamePlaceHolder": "请输入用户名",
+  "passwordPlaceHolder": "请输入密码",
+  "forgetPassword":"忘记密码？",
+  "login":"登录",
+  "nowPlaying": "正在播放",
+  "play": "播放",
+  "pause": "暂停",
+  "prev": "上一首",
+  "next": "下一首",
+  "volume": "音量",
+  "chooseDevice": "AirPods Pro（Dave）",
+  "trackDuration": "{m}:{s}"
+}
   

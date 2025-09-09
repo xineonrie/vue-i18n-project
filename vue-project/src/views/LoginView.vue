@@ -4,29 +4,37 @@
       <section class="main">
         <LanguageSwitcher class="switcher" />
         <img src="../assets/main-icon.png" class="main-icon" />
-        <p class="title">Sign in to your<br>Account</p>
+        <p class="title">{{ t('loginTitle1') }}<br>{{ t('loginTitle2') }}</p>
         <div>
-          <span>Don't have an account?</span>
-          <span class="sign-up">Sign Up</span>
+          <span>{{ t('loginInfo') }}</span>
+          <span class="sign-up">{{ t('register') }}</span>
         </div>
-        <a-form class="form">
+        <a-form 
+          class="form"
+          :model="formState"
+          @onFinish="onFinish"
+        >
           <a-form-item
           name="username"
-
+          :rules="[{ required: true, message: 'Please input your username!' }]"
         >
-          <a-input class="input" placeholder="username" v-model:value="formState.username" />
+          <a-input 
+            class="input" 
+            :placeholder="t('userNamePlaceHolder')"
+            v-model:value="formState.username"
+          />
         </a-form-item>
-
         <a-form-item
           name="password"
+          :rules="[{ required: true, message: 'Please input your password!' }]"
         >
-          <a-input-password  class="input" placeholder="password" v-model:value="formState.password" />
+          <a-input-password class="input" :placeholder="t('passwordPlaceHolder')" v-model:value="formState.password" />
         </a-form-item>
         <a-form-item>
-          <a-button class="login-btn" type="default" html-type="submit">Login</a-button>
+          <a-button class="login-btn" type="default" html-type="submit">{{ t("login") }}</a-button>
         </a-form-item>
         </a-form>
-        <span><u>Forgot Your Password ?</u></span>
+        <span><u>{{ t("forgetPassword") }}</u></span>
       </section>
     </BaseThreePane>
   </div>
@@ -36,6 +44,9 @@
 import BaseThreePane from '@/components/BaseThreePane.vue'
 import { reactive } from 'vue';
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 interface FormState {
   username: string;
@@ -48,6 +59,10 @@ const formState = reactive<FormState>({
   password: '',
   remember: true,
 });
+
+const onFinish = (values: any) => {
+  console.log('Success:', values);
+};
 </script>
 
 <style>
