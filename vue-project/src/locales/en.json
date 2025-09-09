@@ -6,6 +6,8 @@
   "forgetPassword":"Forgot Your Password ?",
   "userNamePlaceHolder": "username",
   "passwordPlaceHolder": "password",
+  "userWarning":"Please input your username!",
+  "passwordWarning":"Please input your password!",
   "login":"Login",
   "nowPlaying": "Now playing",
   "play": "Play",

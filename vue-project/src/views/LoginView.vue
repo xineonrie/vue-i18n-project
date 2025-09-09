@@ -12,11 +12,11 @@
         <a-form 
           class="form"
           :model="formState"
-          @onFinish="onFinish"
+          @finish="onFinish"
         >
           <a-form-item
           name="username"
-          :rules="[{ required: true, message: 'Please input your username!' }]"
+          :rules="[{ required: true, message: t('userWarning') }]"
         >
           <a-input 
             class="input" 
@@ -26,7 +26,7 @@
         </a-form-item>
         <a-form-item
           name="password"
-          :rules="[{ required: true, message: 'Please input your password!' }]"
+          :rules="[{ required: true, message: t('passwordWarning') }]"
         >
           <a-input-password class="input" :placeholder="t('passwordPlaceHolder')" v-model:value="formState.password" />
         </a-form-item>
@@ -45,6 +45,9 @@ import BaseThreePane from '@/components/BaseThreePane.vue'
 import { reactive } from 'vue';
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { useI18n } from 'vue-i18n'
+import { request, realRequest } from '@/utils/request'
+import store from '@/store';
+import router from '@/router';
 
 const { t } = useI18n()
 
@@ -60,8 +63,20 @@ const formState = reactive<FormState>({
   remember: true,
 });
 
-const onFinish = (values: any) => {
-  console.log('Success:', values);
+async function onFinish (values: any){  
+  const res = await request({
+    api:'/api/login',
+    method: 'POST',
+    payload: values
+  })
+
+  if(res.ok) {
+    store.commit('USER_LOGIN')
+    const route = router.currentRoute.value
+    const redirect = (route.query.redirect as string | undefined) || '/home'
+    await router.replace(redirect)
+  }
+
 };
 </script>
 

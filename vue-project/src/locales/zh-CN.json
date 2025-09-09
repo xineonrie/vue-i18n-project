@@ -4,6 +4,8 @@
   "loginInfo":"新用户？",
   "register": "点此注册",
   "userNamePlaceHolder": "请输入用户名",
+  "userWarning":"请输入用户名！",
+  "passwordWarning":"请输入密码！",
   "passwordPlaceHolder": "请输入密码",
   "forgetPassword":"忘记密码？",
   "login":"登录",

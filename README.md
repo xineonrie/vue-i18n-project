@@ -25,7 +25,7 @@ I know nothing about these so learn first! 🧐
 
 ## 3. Features
 - [x] P0 - Basic page structure
-    - [ ] P0 - Router Authorization/ Guard
+    - [x] P0 - Router Authorization/ Guard
     - [ ] P0 - Web API Wrapper (both mobile and web)
     - [x] P0 - Login Page
     - [ ] P1 - Home Page (And choose one music to play!)

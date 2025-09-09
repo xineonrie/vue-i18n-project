@@ -6,6 +6,8 @@
     "userNamePlaceHolder": "يرجى إدخال اسم المستخدم",
     "passwordPlaceHolder": "يرجى إدخال كلمة المرور",
     "forgetPassword": "هل نسيت كلمة المرور؟",
+    "passwordWarning": "يرجى إدخال كلمة المرور!",
+    "userWarning": "يرجى إدخال اسم المستخدم!",
     "login": "تسجيل الدخول",
     "nowPlaying": "قيد التشغيل",
     "play": "تشغيل",

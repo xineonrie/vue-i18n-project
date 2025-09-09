@@ -1,6 +1,7 @@
 import type { Module } from 'vuex'
 import { i18n, loadMessages, FALLBACK, RTL_PREFIXES, langList } from './index'
 import { storage } from '@/utils/storage'
+import router from '@/router'
 
 export interface I18nState {
     locale: string
@@ -10,6 +11,7 @@ export interface I18nState {
 const isRtl = (l: string) => RTL_PREFIXES.some(p => l.startsWith(p)) // if RTL, just prefixes check
 
 const isLangSupported = (l: string) => langList.filter(item => item.locale === l).length > 0
+
 
 export const i18nModule:Module<I18nState,any> = {
     namespaced: true,
@@ -57,8 +59,17 @@ export const i18nModule:Module<I18nState,any> = {
             }
         }
             console.log('current language: ', effective)
-            const url = new URL(window.location.href)
-            console.log(url)
+
+            const route = router.currentRoute.value
+            const nextQuery: Record<string, any> = { ...route.query, lang: effective}
+
+            const cur = (route.query.lang as string | undefined) || undefined
+            if (cur !== nextQuery.lang) {
+                await router.replace({
+                    query: nextQuery,
+                    hash: route.hash,
+                })
+            }
             i18n.global.locale.value = effective
             document.documentElement.setAttribute('lang', effective) // set html language tag
             document.documentElement.setAttribute('dir', isRtl(effective) ? 'rtl' : 'ltr')
