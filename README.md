@@ -26,9 +26,9 @@ I know nothing about these so learn first! 🧐
 ## 3. Features
 - [x] P0 - Basic page structure
     - [x] P0 - Router Authorization/ Guard
-    - [ ] P0 - Web API Wrapper (both mobile and web)
+    - [x] P0 - Web API Wrapper (both mobile and web)
     - [x] P0 - Login Page
-    - [ ] P1 - Home Page (And choose one music to play!)
+    - [ ] P1 - Home Page
 - [x] P0 - i18n support
     - [x] P0 - Runtime language switching 
     - [x] P0 - Initial language setup from URL parameter (`?lang=xx`)  
@@ -40,12 +40,11 @@ I know nothing about these so learn first! 🧐
     - [ ] P0 - Android layout check
     - [x] P1 - ios layout check (Xcode needed)
 - [ ] P0 - Build performance optimization 
-    - [ ] P0 - Lazy-loaded translation files (one chunk per language)   
+    - [x] P0 - Lazy-loaded translation files (one chunk per language)   
     - [ ] P0 - Tree shaking
 - [ ] P0 - Basic accessibility support  
 - [ ] P1 - Project stability support
     - [ ] P1 - Localazy integration 
-    - [ ] P2 - Missing key auto check  
     - [ ] P2 - Bundle size calculation
     - [ ] P2 - Unit test
 
