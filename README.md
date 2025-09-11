@@ -44,7 +44,7 @@ I know nothing about these so learn first! 🧐
     - [ ] P0 - Tree shaking
 - [ ] P0 - Basic accessibility support  
 - [ ] P1 - Project stability support
-    - [ ] P1 - Localazy integration 
+    - [ ] P1 - Localazy test 
     - [ ] P2 - Bundle size calculation
     - [ ] P2 - Unit test
 

@@ -4,7 +4,7 @@
       <section class="main">
         <LanguageSwitcher class="switcher" />
         <img src="../assets/main-icon.png" class="main-icon" />
-        <p class="title">{{ t('loginTitle1') }}<br>{{ t('loginTitle2') }}</p>
+        <h1 class="title">{{ t('loginTitle1') }}<br>{{ t('loginTitle2') }}</h1>
         <div>
           <span>{{ t('loginInfo') }}</span>
           <span class="sign-up">{{ t('register') }}</span>
@@ -20,6 +20,7 @@
         >
           <a-input 
             class="input" 
+            aria-required="true"
             :placeholder="t('userNamePlaceHolder')"
             v-model:value="formState.username"
           />
@@ -28,7 +29,7 @@
           name="password"
           :rules="[{ required: true, message: t('passwordWarning') }]"
         >
-          <a-input-password class="input" :placeholder="t('passwordPlaceHolder')" v-model:value="formState.password" />
+          <a-input-password aria-required="true" class="input" :placeholder="t('passwordPlaceHolder')" v-model:value="formState.password" />
         </a-form-item>
         <a-form-item>
           <a-button class="login-btn" type="default" html-type="submit">{{ t("login") }}</a-button>

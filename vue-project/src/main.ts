@@ -12,4 +12,7 @@ async function bootstrap() {
   await store.dispatch('i18n/initLocale')
   createApp(App).use(store as unknown as any).use(i18n).use(router).use(Antd).mount('#app') // TODO: Fix type
 }
-bootstrap()
+
+bootstrap().catch(err => {
+  console.error("App bootstrap failed", err);
+});
